@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $sps = config("auth.sps");
+        return view('home', compact('sps'));
     }
 }

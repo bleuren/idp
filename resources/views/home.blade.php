@@ -15,6 +15,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <ul>
+                    @foreach ($sps as $sp)
+                        <li><a href="{{ $sp['url'] }}">{{ $sp['name'] }}</a></li>
+                    @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
